@@ -1,0 +1,43 @@
+@charset "utf-8";
+#main {
+	font-family: 'Open Sans';
+	background-color: #0D856B;
+	border: 3px solid black;
+	border-radius: 6px;
+	height:auto;
+	width:95vw;
+	position:static;
+	margin-left:4px;
+	padding-top:8px;
+	padding-bottom:4px;
+	padding-left:5px;
+	color:white;
+	font-size:14px;
+	}
+.bodyt a:link,.bodyt a:visited{
+	color:white;
+}
+
+
+#NavTop {
+	font-family:'Open Sans';
+	background-color: #9B00B8;
+	border: 3px solid black;
+	border-radius: 5px;
+	position: fixed;
+	width: 95vw;
+	vertical-align:top;
+	height:100px;
+	padding-top:10px;
+	padding-bottom:6px;
+	margin-left:4px;
+	padding-left:5px;
+	color:white;
+}
+
+.galleryimgMods {
+	width:400px;
+}
+.galleryimgMods:active{
+	width:800px;
+}
