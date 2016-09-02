@@ -1,7 +1,7 @@
 @charset "utf-8";
 #main {
 	font-family: 'Open Sans';
-	background-color: #0D856B;
+	background-color: #2A2624;
 	border: 3px solid black;
 	border-radius: 6px;
 	height:auto;
@@ -21,7 +21,7 @@
 
 #NavTop {
 	font-family:'Open Sans';
-	background-color: #9B00B8;
+	background-color: #0D856B;
 	border: 3px solid black;
 	border-radius: 5px;
 	position: fixed;
@@ -40,4 +40,11 @@
 }
 .galleryimgMods:active{
 	width:800px;
+}
+body{
+	/*background-color:#2A2624;
+	background-color:#31263F;*/
+	background-color:#5D4B72;
+	background-color:#534E5B;
+	background-color:#4D4559;
 }
