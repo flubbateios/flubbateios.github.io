@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+var nootmusic;
+$(document).ready(function () {
+	$('#body').append('<div class="nav_item nav_item_text btn_std_ix" id = "nootify" onclick="nootify()"><loc>Noot</loc></div>');
+	$('body').after('<div id="nootnoot" style="background-image: url(\'http://nootnoot.net/files/noot.gif\'); background-repeat: repeat-xy;width:100%;height:100%"></div>');
+	$('#nootnoot').css('display', 'none');
+	$("#nootnoot").html('<div style = "position:fixed;opacity:0.2;width:100%;height:100%" id = "disco"> </div>');
+	$('#nootnoot').append('<div class="nav_item nav_item_text btn_std_ix" style="z-index:4;position:fixed" id="exit_noot" onclick="saveme()" ><loc>Save Me</loc></div>');
+	
+})
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+function update_disco(){
+	$("#disco").css('background-color',getRandomColor())
+	
+}
+function nootify() {
+	$('body').css('display', 'none');
+	$('#nootnoot').css('display', 'block');
+	nootmusic = new Audio('http://flubbateios.com/files/noot.ogg');
+	nootmusic.volume = 1;
+	nootmusic.loop=true;
+	nootmusic.play();
+	var disco = setInterval(update_disco,10);
+
+}
+function saveme() {
+	clearInterval(disco);
+	$('body').css('display', 'block');
+	$('#nootnoot').css('display', 'none');
+	nootmusic.pause();
+
+}
+
+</script>
+<title>Noot Noot</title>
+</head>
+
+<body>
+</body>
+</html>
