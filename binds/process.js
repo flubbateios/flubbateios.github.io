@@ -2,6 +2,7 @@ function process(i, alias) {
 	var c = i.split('\n');
 	for (var x in c) {
 		var t = c[x];
+		t="say "+t
 		t = t.split('"').join("'");
 		t = t.split(';').join(' -');
 		c[x] = t;
