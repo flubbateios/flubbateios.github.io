@@ -13,7 +13,7 @@ function process(i, alias) {
 	for (var x in c) {
 		var a = c[x];
 		var n = alias + x.toString();
-		var m = alias + (x + 1).toString();
+		var m = alias + (parseInt(x) + 1).toString();
 		var f;
 		if (x != c.length - 1) {
 			f = 'alias "' + n + '" "' + a + '; alias ' + alias + ' ' + m + '"\n';
