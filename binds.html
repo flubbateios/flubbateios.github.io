@@ -1,3 +1,13 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>TF2 Bind Generator</title>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
+<script>
 function process(i, alias) {
 	var c = i.split('\n');
 	for (var x in c) {
@@ -40,3 +50,24 @@ var model = new (function(){
 $(document).ready(function(){
 	ko.applyBindings(model);
 })
+
+</script>
+
+<style>
+textarea{
+	width:100%;
+	min-height:400px;
+	max-height:600px;
+}
+</style>
+</head>
+
+<body>
+
+
+<textarea data-bind="value:input"></textarea>
+<input data-bind="value:alias">
+<textarea data-bind="value:output"></textarea> 
+
+</body>
+</html>
